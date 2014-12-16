@@ -79,8 +79,6 @@ class: center, middle, inverse
 
 ![demotime](demo.jpg)
 
-# J'associe un ticket JIRA
-
 ---
 
 class: middle
