@@ -83,6 +83,8 @@ class: center, middle, inverse
 
 # NOUVEAU SLIDE
 
+# UN TEXTE
+
 ---
 
 class: middle
