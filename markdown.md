@@ -79,10 +79,6 @@ class: center, middle, inverse
 
 ![demotime](demo.jpg)
 
----
-
-# NOUVEAU SLIDE
-
 # UN TEXTE
 
 ---
