@@ -81,10 +81,6 @@ class: center, middle, inverse
 
 ---
 
-# NOUVEAU SLIDE
-
----
-
 class: middle
 
 <div class="michu">
