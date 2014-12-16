@@ -79,7 +79,7 @@ class: center, middle, inverse
 
 ![demotime](demo.jpg)
 
-# UN TEXTE
+# J'associe un ticket JIRA
 
 ---
 
