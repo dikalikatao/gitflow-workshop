@@ -20,7 +20,7 @@ class: center
 
 # C'est un cadre
 
-![Cadre](cadre.png)
+![Cadre](imgs/cadre.png)
 
 
 ???
@@ -30,7 +30,7 @@ class: center
 
 # Workflow
 
-![git-workflow](git-workflow.png)
+![git-workflow](imgs/git-workflow.png)
 
 ---
 class: center
@@ -44,7 +44,7 @@ Linux : apt-get install git-flow
 Mac : brew install git-flow OU port install git-flow
 ```
 
-![soeasy](soeasy.jpg)
+![soeasy](imgs/soeasy.jpg)
 
 ???
 
@@ -56,7 +56,7 @@ class: center
 
 # Commandes
 
-![GitflowCommands](gitflow-commands.png)
+![GitflowCommands](imgs/gitflow-commands.png)
 
 
 ---
@@ -77,14 +77,14 @@ class: center
 ---
 class: center, middle, inverse
 
-![demotime](demo.jpg)
+![demotime](imgs/demo.jpg)
 
 ---
 
 class: middle
 
 <div class="michu">
-<img src="michu.png" width="180" height="220" class="author" />
+<img src="imgs/michu.png" width="180" height="220" class="author" />
 <blockquote>"Ouai c'est bien beau tout ça mais si je veux utiliser facilement GitFlow dans mon projet Maven ?"<br/>
 <span style="font-weight: bolder; font-size: 22px;">- Madame Michu, experte maven depuis 1832</span></blockquote>
 </div>
@@ -96,30 +96,32 @@ class: middle
 class: center, middle, inverse
 
 
-# jgitflow
+# gitflow-maven-plugin
 
 ---
 
-## Ajouter jgitflow à son projet
+## Ajouter la lib à son projet
 
 ### Exemple de config :
 ```xml
 <build>
     <plugins>
         <plugin>
-            <groupId>external.atlassian.jgitflow</groupId>
-            <artifactId>jgitflow-maven-plugin</artifactId>
-            <version>1.0-m4.3</version>
+            <groupId>com.amashchenko.maven.plugin</groupId>
+            <artifactId>gitflow-maven-plugin</artifactId>
+            <version>1.0.8</version>
             <configuration>
-                    <flowInitContext>
-                        <masterBranchName>master</masterBranchName>
-                        <developBranchName>develop</developBranchName>
-                        <featureBranchPrefix>feature-</featureBranchPrefix>
-                        <releaseBranchPrefix>release-</releaseBranchPrefix>
-                        <hotfixBranchPrefix>hotfix-</hotfixBranchPrefix>
-                        <versionTagPrefix>protocat-</versionTagPrefix>
-                    </flowInitContext>
-                </configuration>
+                <installProject>false</installProject>
+                <verbose>false</verbose>
+                <gitFlowConfig>
+                    <productionBranch>master</productionBranch>
+                    <developmentBranch>develop</developmentBranch>
+                    <featureBranchPrefix>feature/</featureBranchPrefix>
+                    <releaseBranchPrefix>release/</releaseBranchPrefix>
+                    <hotfixBranchPrefix>hotfix/</hotfixBranchPrefix>
+                    <supportBranchPrefix>support/</supportBranchPrefix>
+                </gitFlowConfig>
+            </configuration>
         </plugin>
     </plugins>
 </build>
@@ -127,23 +129,24 @@ class: center, middle, inverse
 ---
 class: center, middle, inverse
 
-## jgitflow : commandes
+# gitflow-maven-plugin
+## Commandes
 
-```shell
-mvn jgitflow:feature-start
-mvn jgitflow:feature-finish
-mvn jgitflow:release-start
-mvn jgitflow:release-finish
-mvn jgitflow:hotfix-start
-mvn jgitflow:hotfix-finish
-mvn jgitflow:build-number 
+```xml
+mvn gitflow:feature-start
+mvn gitflow:feature-finish
+mvn gitflow:release-start
+mvn gitflow:release-finish
+mvn gitflow:hotfix-start
+mvn gitflow:hotfix-finish
+mvn gitflow:help
 ```
 ---
 class: center, middle
 
 ## 
 <div class="michu">
-<img src="robin.jpg" width="180" height="260" class="author" />
+<img src="imgs/robin.jpg" width="180" height="260" class="author" />
 <blockquote>"Moi j'utilise SVN et je voudrais faire pareil !<br/>C'est possible ??"</blockquote>
 </div>
 
@@ -152,12 +155,12 @@ class: center, middle
 ---
 class: center, middle, inverse
 
-![svn](svn.jpg)
+![svn](imgs/svn.jpg)
 
 ???
 
 ---
 class: center, middle, inverse
 
-![questions](questions.jpg)
+![questions](imgs/questions.jpg)
 
